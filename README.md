@@ -89,7 +89,10 @@ Portfolio
 https://abhishek-portfolio8051.netlify.app/
 
 ---
+## ⭐ Support
 
-⭐ If you like this project, consider giving it a star.
+If you like this project, please consider giving it a ⭐ on GitHub.
 
-⚡ Cybersecurity is not just a skill — it's a mindset.
+---
+
+⚡ *Cybersecurity is not just a skill — it's a mindset.*
