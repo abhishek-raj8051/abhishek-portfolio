@@ -1,0 +1,70 @@
+/* --- Begin style.css --- */
+
+/* Contents of style.css */
+
+.bar-emoji {
+    background: none !important;
+    position: relative;
+    left: 0;
+    margin-left: -2.2rem;
+    font-size: 2rem;
+    pointer-events: none;
+    opacity: 0;
+    transform: scale(0.7);
+    filter: grayscale(1) opacity(0.5);
+    transition: filter 0.7s, opacity 0.7s, transform 0.7s cubic-bezier(.25,.8,.25,1);
+}
+.bar:hover .bar-emoji,
+.bar.filled .bar-emoji {
+    filter: drop-shadow(0 0 6px #00bfff) grayscale(0) opacity(1);
+    opacity: 1;
+    transform: scale(1);
+}
+.bar {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-right: 0;
+}
+/* ...existing code from style.css... */
+
+/* --- End style.css --- */
+
+/* --- Begin custom.css --- */
+
+/* Contents of custom.css */
+
+@media (max-width: 768px) {
+                .navbar a {
+                    background: transparent !important;
+                    color: #fff !important;
+                    box-shadow: none !important;
+                    border: none !important;
+                    transform: none !important;
+                    transition: color 0.22s !important;
+                    animation: none !important;
+                }
+                .navbar a:hover,
+                .navbar a:focus,
+                .navbar a.active {
+                    color: #00c6ff !important;
+                    box-shadow: none !important;
+                    transform: none !important;
+                    background: transparent !important;
+                    animation: none !important;
+                }
+                .navbar a::after {
+                    display: none !important;
+                }
+        .navbar a:hover,
+        .navbar a:focus,
+        .navbar a.active {
+            color: #00c6ff !important;
+        }
+        .navbar a::after {
+            display: none !important;
+        }
+}
+/* ...existing code from custom.css... */
+
+/* --- End custom.css --- */

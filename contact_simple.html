@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quick Contact - Abhishek Raj</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .quick-contact-section {
+            max-width: 400px;
+            margin: 3rem auto;
+            background: rgba(30,40,60,0.95);
+            border-radius: 1.2rem;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.15);
+            padding: 2rem 2.5rem;
+            animation: fadeInUp 1.2s cubic-bezier(.25,.8,.25,1);
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .quick-contact-form .input-box {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.2rem;
+        }
+        .quick-contact-form .input-box i {
+            font-size: 1.3rem;
+            color: var(--main-color);
+            margin-right: 0.7rem;
+        }
+        .quick-contact-form .input-box input {
+            flex:1;
+            padding: 0.7rem 1rem;
+            border-radius: 0.6rem;
+            border: none;
+            outline: none;
+            background: #222a36;
+            color: #fff;
+            font-size: 1rem;
+            transition: box-shadow 0.3s, border 0.3s, background 0.3s;
+        }
+        .quick-contact-form .input-box input:focus {
+            box-shadow: 0 0 0 2px var(--main-color, #00bfff);
+            background: #263045;
+            border: 1.5px solid var(--main-color, #00bfff);
+        }
+        .quick-contact-form .btn {
+            background: linear-gradient(100deg, var(--main-color) 0%, #007bbf 100%);
+            color: #fff;
+            padding: 0.85rem 2.5rem;
+            border-radius: 0.7rem;
+            font-size: 1.18rem;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 4px 18px 0 rgba(0,0,0,0.13), 0 1.5px 6px 0 var(--main-color, #00bfff);
+            display: inline-block;
+            font-weight: 700;
+            letter-spacing: 1.2px;
+            width: 100%;
+            margin-top: 0.5rem;
+            transition: background 0.35s cubic-bezier(.25,.8,.25,1), box-shadow 0.35s, transform 0.18s, color 0.18s;
+            outline: none;
+            border-bottom: 3px solid #007bbf;
+        }
+        .quick-contact-form .btn:hover, .quick-contact-form .btn:focus {
+            background: linear-gradient(100deg, #007bbf 0%, var(--main-color) 100%);
+            box-shadow: 0 8px 32px 0 var(--main-color, #00bfff), 0 2px 12px 0 #007bbf;
+            color: #fff;
+            transform: translateY(-4px) scale(1.045);
+            outline: none;
+        }
+        .quick-contact-form .btn:active {
+            background: linear-gradient(100deg, var(--main-color) 0%, #007bbf 100%);
+            box-shadow: 0 2px 8px 0 var(--main-color, #00bfff);
+            color: #fff;
+            transform: scale(0.98);
+        }
+    </style>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <section class="quick-contact-section">
+        <h1 class="heading" style="text-align:center; margin-bottom:2rem; font-size:2rem; color:var(--main-color);">Quick Contact</h1>
+        <form class="quick-contact-form">
+            <div class="input-box">
+                <i class='bx bx-phone'></i>
+                <input type="text" name="mobile" placeholder="Mobile Number" required pattern="[0-9]{10,15}">
+            </div>
+            <div class="input-box">
+                <i class='bx bx-envelope'></i>
+                <input type="email" name="email" placeholder="Gmail" required>
+            </div>
+            <button type="submit" class="btn">Send</button>
+        </form>
+        <div style="text-align:center; margin-top:2rem; color: #aaa; font-size: 0.95rem;">Only your mobile number and Gmail will be sent.</div>
+        <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+        <script src="sendmail_simple.js"></script>
+    </section>
+</body>
+</html>

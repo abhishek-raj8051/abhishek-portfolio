@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Personal Portfolio Website Design | Codehal</title>
+    
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles/custom.css">
+   <!--box icons-->
+   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+        <!-- Quick Contact (WhatsApp) Popup Modal -->
+        <div id="quickcontactModal" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(20,30,40,0.65); z-index:9999; justify-content:center; align-items:center;">
+            <section class="quick-contact-section" style="max-width: 400px; margin: 0 auto; background: rgba(30,40,60,0.98); border-radius: 1.2rem; box-shadow: 0 4px 24px rgba(0,0,0,0.18); padding: 1.1rem 1.2rem 0.2rem 1.2rem; position:relative; display:flex; flex-direction:column; justify-content:center; min-height:180px;">
+    <span id="waLogoWrap" style="display:flex; justify-content:center; align-items:center; margin-bottom:2.2rem; margin-top:2.2rem;">
+        <img id="waLogoImg" src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" style="height:4.5rem; width:4.5rem; filter: none; display:block; border-radius:50%; background:transparent; padding:0; transition: transform 0.4s, box-shadow 0.4s, opacity 0.3s; opacity:0.82;">
+    </span>
+    <button id="closeQuickContact" style="position:absolute; top:8px; right:12px; background:none; border:none; color:#fff; font-size:1.5rem; cursor:pointer; z-index:2; transition: transform 0.5s;">&times;</button>
+    <form id="whatsappContactForm" class="quick-contact-form" style="margin:0; min-width:320px; max-width:400px; min-height:120px; height:auto; padding-bottom:0; margin-bottom:0;">
+                    <div style="display:flex; justify-content:center; align-items:center; margin-bottom:0.7rem;">
+                    </div>
+                <button type="submit" class="btn" style="width: 100%; font-size: 1.15rem; letter-spacing: 1px; margin-top:0.3rem; padding: 1.15rem 0;">Start Chat</button>
+                </form>
+              </section>
+        </div>
+    <!-- WhatsApp popup logic moved to scripts/custom.js -->
+    <!-- End Quick Contact (WhatsApp) Form -->
+    <header class="header">
+        <a href="#" class="logo"><h3>Abhi....</h3></a>
+
+        <dev class="bx bx-menu" id="menu-icon"></dev>
+
+        <nav class="navbar">
+            <a href="#home"class="active">home</a>
+            <a href="#about">about</a>
+            <a href="#services">services</a>
+            <a href="#portfolio">portfolio</a>
+            <a href="#skills">my skill</a>
+            <a href="#quickcontact">contact</a>
+        </nav>
+    </header>
+
+    <!--home section desion-->
+    <section class="home" id="home">
+        <div class="home-content">
+            <h1>Hi, I'm <span>Abhishek Raj</span></h1>
+            <dev class="text-animate">
+                <h3>Ethical Hacker </h3>
+            </dev>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum amet alias exercitationem cum? Dolorem voluptas, molestiae soluta suscipit repellendus veritatis, nihil molestias impedit aliquam pariatur, quas sit non animi unde.</p>
+            <div class="welcome-animate" id="welcomeMsg" style="display:none;">
+                <h3>Welcome</h3>
+            </div>
+            <div class="btn-box">
+                <a href="#" class="btn classy-2d-btn" id="hireMeBtn">Hire Me</a>
+                <a href="#" class="btn classy-2d-btn">Let's Talk</a>
+            </div>
+        </div>
+        <dev class="home-sci">
+            
+
+            <a href="#"><i class='bx bxl-twitter' ></i></a>
+            <a href="https://www.linkedin.com/in/abhishek-raj-portfolio" target="_blank"><i class='bx bxl-linkedin' ></i></a>
+            <a href="#"><i class='bx bxl-facebook' ></i></a>
+            <a href="https://www.instagram.com/abhishek_raj2210?igsh=aGlsMTR5ajQ0anI1" target="_blank"><i class='bx bxl-instagram' ></i></a>
+        </dev>
+        <div class="home-imgHover"></div>
+        <!-- Hire Me Modal Form -->
+        <div id="hireMeModal" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(20,30,40,0.65); z-index:99999; justify-content:center; align-items:center;">
+            <section style="max-width: 400px; margin: 0 auto; background: rgba(30,40,60,0.98); border-radius: 1.2rem; box-shadow: 0 4px 24px rgba(0,0,0,0.18); padding: 1.1rem 1.2rem 0.2rem 1.2rem; position:relative; display:flex; flex-direction:column; justify-content:center; min-height:180px;">
+                <button id="closeHireMeModal" style="position:absolute; top:8px; right:12px; background:none; border:none; color:#fff; font-size:1.5rem; cursor:pointer; z-index:2; transition: transform 0.5s;">&times;</button>
+                <h2 style="text-align:center; color:var(--main-color); margin-bottom:1.2rem;">Hire Me</h2>
+                <form id="hireMeForm" style="margin:0; min-width:320px; max-width:400px; min-height:120px; height:auto; padding-bottom:0; margin-bottom:0;">
+                    <div style="display:flex; align-items:center; margin-bottom:1.2rem;">
+                        <i class='bx bx-user' style="font-size: 1.3rem; color: var(--main-color); margin-right: 0.7rem;"></i>
+                        <input type="text" name="name" placeholder="Your Name" required style="flex:1; padding: 0.7rem 1rem; border-radius: 0.6rem; border: none; outline: none; background: #222a36; color: #fff; font-size: 1rem;">
+                    </div>
+                    <div style="display:flex; align-items:center; margin-bottom:1.2rem;">
+                        <i class='bx bx-envelope' style="font-size: 1.3rem; color: var(--main-color); margin-right: 0.7rem;"></i>
+                        <input type="email" name="email" placeholder="Gmail" required style="flex:1; padding: 0.7rem 1rem; border-radius: 0.6rem; border: none; outline: none; background: #222a36; color: #fff; font-size: 1rem;">
+                    </div>
+                    <div style="display:flex; align-items:center; margin-bottom:1.2rem;">
+                        <i class='bx bx-phone' style="font-size: 1.3rem; color: var(--main-color); margin-right: 0.7rem;"></i>
+                        <input type="text" name="mobile" placeholder="Mobile Number" required pattern="[0-9]{10,15}" style="flex:1; padding: 0.7rem 1rem; border-radius: 0.6rem; border: none; outline: none; background: #222a36; color: #fff; font-size: 1rem;">
+                    </div>
+                    <div style="display:flex; align-items:flex-start; margin-bottom:1.5rem;">
+                        <i class='bx bx-message-square-detail' style="font-size: 1.3rem; color: var(--main-color); margin-right: 0.7rem; margin-top: 0.4rem;"></i>
+                        <textarea name="message" rows="4" placeholder="Your Message" required style="flex:1; padding: 0.7rem 1rem; border-radius: 0.6rem; border: none; outline: none; background: #222a36; color: #fff; font-size: 1rem; resize: vertical;"></textarea>
+                    </div>
+                    <button type="submit" class="btn">Send</button>
+                </form>
+            </section>
+        </div>
+        
+    </section>
+    <section class="about" id="about">
+        <h2 class="heading">About <span> me</span></h2>
+        <div class="about-img">
+            <!--insert image this area-->
+            <img src="/image9.jpg" alt="Abhishek's photo">
+        </div>
+        <div class="about-content">
+            <h3 class="about-eh-effect">Ethical Hacker!</h3>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque ipsam exercitationem doloribus iste! Earum eveniet nemo veniam sit necessitatibus eligendi, doloribus sed facere rem ex corporis, dignissimos, minima incidunt aperiam?</p>
+
+        <div class="btn-box">
+            <a href="#" class="btn" id="readMoreBtn">Read more</a>
+        </div>
+        </div>
+    </section>
+    <section class="education" id="education">
+        <h2 class="heading">My <span>Journey</span></h2>
+        <div class="education-row">
+            <div class="education-column">
+                <h3 class="title">Education</h3>
+                <div class="education-box">
+                    <div class="education-content">
+                        <div class="content">
+                            <div class="year"><i class='bx bxs-calendar' ></i> 2024 - 2025</div>
+                            <h3>B-tech Degree loading - university </h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde est, nihil animi dicta excepturi obcaecati,
+                                 ipsa iure impedit enim rerum, aut autem? Debitis eius nulla ex nam mollitia possimus tempore.</p>
+                        </div>
+                    </div>
+                     <div class="education-content">
+                        <div class="content">
+                            <div class="year"><i class='bx bxs-calendar' ></i> 2025 - 2026</div>
+                            <h3>B-tech Degree loading - university </h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde est, nihil animi dicta excepturi obcaecati,
+                                 ipsa iure impedit enim rerum, aut autem? Debitis eius nulla ex nam mollitia possimus tempore.</p>
+                        </div>
+                    </div>
+                     <div class="education-content">
+                        <div class="content">
+                            <div class="year"><i class='bx bxs-calendar' ></i> 2026 - 2027</div>
+                            <h3>B-tech Degree loading - university </h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde est, nihil animi dicta excepturi obcaecati,
+                                 ipsa iure impedit enim rerum, aut autem? Debitis eius nulla ex nam mollitia possimus tempore.</p>
+                        </div>
+                    </div>
+                    <div class="education-content">
+                        <div class="content">
+                            <div class="year"><i class='bx bxs-calendar' ></i> 2027 - 2028</div>
+                            <h3>B-tech Degree loading - university </h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde est, nihil animi dicta excepturi obcaecati,
+                                 ipsa iure impedit enim rerum, aut autem? Debitis eius nulla ex nam mollitia possimus tempore.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="education-column">
+                <h3 class="title">Experience</h3>
+                <div class="education-box">
+                    <div class="education-content">
+                        <div class="content">
+                            <div class="year"><i class='bx bxs-calendar' ></i> 2024 - 2025</div>
+                            <h3>Fresher</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde est, nihil animi dicta excepturi obcaecati,
+                                 ipsa iure impedit enim rerum, aut autem? Debitis eius nulla ex nam mollitia possimus tempore.</p>
+                        </div>
+                    </div>
+                    <div class="education-content">
+                        <div class="content">
+                            <div class="year"><i class='bx bxs-calendar' ></i> 2025 - 2026</div>
+                            <h3>Fresher</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde est, nihil animi dicta excepturi obcaecati,
+                                 ipsa iure impedit enim rerum, aut autem? Debitis eius nulla ex nam mollitia possimus tempore.</p>
+                        </div>
+                    </div>
+                    <div class="education-content">
+                        <div class="content">
+                            <div class="year"><i class='bx bxs-calendar' ></i> 2026 - 2027</div>
+                            <h3>Fresher</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde est, nihil animi dicta excepturi obcaecati,
+                                 ipsa iure impedit enim rerum, aut autem? Debitis eius nulla ex nam mollitia possimus tempore.</p>
+                        </div>
+                    </div>
+                    <div class="education-content">
+                        <div class="content">
+                            <div class="year"><i class='bx bxs-calendar' ></i> 2027 - 2028</div>
+                            <h3>Fresher</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde est, nihil animi dicta excepturi obcaecati,
+                                 ipsa iure impedit enim rerum, aut autem? Debitis eius nulla ex nam mollitia possimus tempore.</p>
+                        </div>
+                    </div>
+                </section>
+
+<!--skill section design-->
+<section class="skills" id="skills">
+    <h2 class="heading">My <span>skills</span></h2>
+    <div class="skills-row">
+        <div class="skills-column">
+            <h3 class="title">Coding skills</h3>
+            <div class="skills-box">
+                <div class="skills-content">
+                    <div class="progress">
+                        <h3>HTML <span>60%</span></h3>
+                        <div class="bar"><span></span><span class="bar-emoji">😃</span></div>
+                    </div>
+                    <div class="progress">
+                        <h3>CSS<span>70%</span></h3>
+                        <div class="bar"><span></span><span class="bar-emoji">🙂</span></div>
+                    </div>
+                    <div class="progress">
+                        <h3>Python <span>90%</span></h3>
+                        <div class="bar"><span></span><span class="bar-emoji">😃</span></div>
+                    </div>
+                    <div class="progress">
+                        <h3>Java <span>0%</span></h3>
+                        <div class="bar"><span></span><span class="bar-emoji">😃</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+         <div class="skills-column">
+            <h3 class="title">Professional Skills</h3>
+            <div class="skills-box">
+                <div class="skills-content">
+                    <div class="progress">
+                        <h3>Web Design<span>10%</span></h3>
+                        <div class="bar"><span></span><span class="bar-emoji">😢</span></div>
+                    </div>
+                    <div class="progress">
+                        <h3>Web Devlopment<span>70%</span></h3>
+                        <div class="bar"><span></span><span class="bar-emoji">🙂</span></div>
+                    </div>
+                    <div class="progress">
+                        <h3>Ethical Hacking  <span>20%</span></h3>
+                        <div class="bar"><span></span><span class="bar-emoji">😢</span></div>
+                    </div>
+                    <div class="progress">
+                        <h3>Bug Buntty<span>50%</span></h3>
+                        <div class="bar"><span></span><span class="bar-emoji">🙂</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Services section starts here -->
+<section class="services" id="services">
+    <h1 class="heading"><span style="color:#fff;font-weight:bold;">My</span> <span style="color:var(--main-color);font-weight:bold;">Services</span></h1>
+    <div class="services-row">
+        <div class="service-box" style="position:relative;">
+            <i class='bx bx-shield-quarter'></i>
+            <h3>Ethical Hacking</h3>
+            <p>Professional ethical hacking services to secure your digital assets and protect your business from cyber threats.</p>
+            <button class="btn" id="openContactFormBtn" style="margin-bottom:1rem;">Contact Me</button>
+            <div id="inlineContactFormWrapper" style="display:none; position:absolute; left:50%; top:110%; transform:translateX(-50%); z-index:1000; width:350px;">
+                <button id="closeInlineContactForm" style="position:absolute; top:8px; right:12px; background:none; border:none; color:#fff; font-size:1.5rem; cursor:pointer; z-index:2; transition: transform 0.5s;">&times;</button>
+                <form class="contact-form" id="mainContactForm" style="background: rgba(30,40,60,0.98); border-radius: 1.2rem; box-shadow: 0 4px 24px rgba(0,0,0,0.15); padding: 2rem 2.5rem; margin:0; position:relative;">
+                    <div class="input-box" style="display: flex; align-items: center; margin-bottom: 1.2rem;">
+                        <i class='bx bx-user' style="font-size: 1.3rem; color: var(--main-color); margin-right: 0.7rem;"></i>
+                        <input type="text" name="name" placeholder="Your Name" required style="flex:1; padding: 0.7rem 1rem; border-radius: 0.6rem; border: none; outline: none; background: #222a36; color: #fff; font-size: 1rem;">
+                    </div>
+                    <div class="input-box" style="display: flex; align-items: center; margin-bottom: 1.2rem;">
+                        <i class='bx bx-phone' style="font-size: 1.3rem; color: var(--main-color); margin-right: 0.7rem;"></i>
+                        <input type="text" name="mobile" placeholder="Mobile Number" required pattern="[0-9]{10,15}" style="flex:1; padding: 0.7rem 1rem; border-radius: 0.6rem; border: none; outline: none; background: #222a36; color: #fff; font-size: 1rem;">
+                    </div>
+                    <div class="input-box" style="display: flex; align-items: center; margin-bottom: 1.2rem;">
+                        <i class='bx bx-envelope' style="font-size: 1.3rem; color: var(--main-color); margin-right: 0.7rem;"></i>
+                        <input type="email" name="email" placeholder="Gmail" required style="flex:1; padding: 0.7rem 1rem; border-radius: 0.6rem; border: none; outline: none; background: #222a36; color: #fff; font-size: 1rem;">
+                    </div>
+                    <div class="input-box" style="display: flex; align-items: center; margin-bottom: 1.2rem;">
+                        <i class='bx bx-edit' style="font-size: 1.3rem; color: var(--main-color); margin-right: 0.7rem;"></i>
+                        <input type="text" name="subject" placeholder="Subject" required style="flex:1; padding: 0.7rem 1rem; border-radius: 0.6rem; border: none; outline: none; background: #222a36; color: #fff; font-size: 1rem;">
+                    </div>
+                    <div class="input-box" style="display: flex; align-items: flex-start; margin-bottom: 1.5rem;">
+                        <i class='bx bx-message-square-detail' style="font-size: 1.3rem; color: var(--main-color); margin-right: 0.7rem; margin-top: 0.4rem;"></i>
+                        <textarea name="message" rows="5" placeholder="Your Message" required style="flex:1; padding: 0.7rem 1rem; border-radius: 0.6rem; border: none; outline: none; background: #222a36; color: #fff; font-size: 1rem; resize: vertical;"></textarea>
+                    </div>
+                    <div style="display: flex; justify-content: center; align-items: center; width: 100%; margin-top: 0.5rem;">
+                        <button type="submit" class="btn contact-animated-btn" style="width: 70%; max-width: 220px; font-size: 1.1rem; letter-spacing: 1px; margin-top: 1.2rem; position:relative; overflow:hidden; background: linear-gradient(90deg, #00c6ff 0%, #0072ff 100%); color: #fff; border: none; border-radius: 0.7rem; font-weight: 700; padding: 0.95rem 0; box-shadow: 0 2px 12px 0 rgba(0,191,255,0.18); transition: background 0.35s, box-shadow 0.35s, transform 0.18s;">
+                            Send Message
+                        </button>
+                    </div>
+                </form>
+            </div>
+            <!-- Service section contact form popup logic moved to scripts/custom.js -->
+        </div>
+        <div class="service-box">
+            <i class='bx bx-bug'></i>
+            <h3>Bug Bounty</h3>
+            <p>Find and report vulnerabilities in your applications with a responsible bug bounty approach for maximum security.</p>
+            <a href="#contact" class="btn">Start Bug Bounty</a>
+        </div>
+        <div class="service-box">
+            <i class='bx bx-search-alt'></i>
+            <h3>Penetration Testing</h3>
+            <p>Comprehensive penetration testing to identify and fix security weaknesses before attackers do.</p>
+            <a href="#contact" class="btn">Get a Test</a>
+        </div>
+    </div>
+</div>
+    <div style="text-align:center; margin-top: 2rem;">
+    <!-- Removed duplicate Contact Me button -->
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script src="scripts/sendmail.js"></script>
+    <script src="scripts/custom.js"></script>
+    </div>
+</section>
+<!-- Services section ends here -->
+    <!-- Scroll to Top Button -->
+    <button id="scrollTopBtn" title="Go to top">&#8679;</button>
+    <script src="/index.js"></script>
+    <script>
+    // Hire Me Modal Logic
+    document.addEventListener('DOMContentLoaded', function() {
+        var hireMeBtn = document.getElementById('hireMeBtn');
+        var hireMeModal = document.getElementById('hireMeModal');
+        var closeHireMeModal = document.getElementById('closeHireMeModal');
+        if (hireMeBtn && hireMeModal) {
+            hireMeBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                hireMeModal.style.display = 'flex';
+                document.body.style.overflow = 'hidden';
+            });
+        }
+        if (closeHireMeModal && hireMeModal) {
+            closeHireMeModal.addEventListener('click', function() {
+                hireMeModal.style.display = 'none';
+                document.body.style.overflow = '';
+            });
+        }
+        if (hireMeModal) {
+            hireMeModal.addEventListener('click', function(e) {
+                if (e.target === hireMeModal) {
+                    hireMeModal.style.display = 'none';
+                    document.body.style.overflow = '';
+                }
+            });
+        }
+        // Optional: handle form submit (no backend, just reset and close)
+        var hireMeForm = document.getElementById('hireMeForm');
+        if (hireMeForm) {
+            hireMeForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                alert('Thank you for your interest! Your message has been received.');
+                hireMeForm.reset();
+                hireMeModal.style.display = 'none';
+                document.body.style.overflow = '';
+            });
+        }
+    });
+    </script>
+</body>
+</html>
